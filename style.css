@@ -44,3 +44,11 @@ textarea{
     border-radius: 1rem;
     padding: 1rem;
 }
+
+button {
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: rgb(53, 109, 90);
+    color: white;   
+}
