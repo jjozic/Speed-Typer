@@ -1,0 +1,22 @@
+.content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.gamefield{
+    max-width: 600px;
+    background-color: aquamarine;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.5);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+textarea{
+    border-style: none;
+    border-radius: 1rem;
+    padding: 1rem;
+    resize: none;
+    outline:none;
+}
