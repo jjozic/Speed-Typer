@@ -1,3 +1,11 @@
+header{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3vh;
+    color: green;
+    background-color: aquamarine;
+}
+
 .content{
     display: flex;
     justify-content: center;
