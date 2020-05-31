@@ -8,12 +8,13 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => generateRandomWord(), 500)
 
     function generateRandomWord() {
-        console.log(randomWordGenerator())
+        var typingBox = document.getElementById('typing-box')
         text.innerHTML += (' ' + randomWordGenerator())
-        time.innerHTML = 'Time: ' + (run/2) + 's';
+        time.innerHTML = 'Time: ' + (run) + 's';
+        console.log(typingBox.innerHTML)
         run++
         if (run < 40) {
-            setTimeout(() => generateRandomWord(), 500)
+            setTimeout(() => generateRandomWord(), 1000)
         }
     }
 
