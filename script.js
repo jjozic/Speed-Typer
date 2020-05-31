@@ -4,11 +4,20 @@ document.addEventListener('DOMContentLoaded', () => {
     var run = 0
     var text = document.getElementById('game-text')
     var time = document.getElementById('time')
+    var typingBox = document.getElementById('typing-box')
+
 
     setTimeout(() => generateRandomWord(), 500)
 
+    //reacts on each input of the typing box
+    typingBox.addEventListener('input', () => {
+        const arrayValue = typingBox.value.split('')
+
+        console.log(arrayValue)
+
+    })
+
     function generateRandomWord() {
-        var typingBox = document.getElementById('typing-box')
         text.innerHTML += (' ' + randomWordGenerator())
         time.innerHTML = 'Time: ' + (run) + 's';
         console.log(typingBox.innerHTML)
@@ -22,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return words[Math.floor(Math.random() * words.length)]
     }
 
-    function reset(){
+    function reset() {
         text.innerHTML = 'start'
         console.log('gurke to go')
     }
