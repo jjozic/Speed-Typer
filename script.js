@@ -15,6 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         console.log(arrayValue)
 
+        if(arrayValue[0]==='f'){
+            alert("Rip Harambe")
+        }
+
     })
 
     function generateRandomWord() {
