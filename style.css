@@ -20,7 +20,7 @@ header{
 
 .gamefield{
     width: 30vw;
-    background-color: aquamarine;
+    background-color: var(--dark-marine);
     box-shadow: var(--box-shadow);
     padding: 5vw;
     border-radius: 1rem;
@@ -36,17 +36,18 @@ header{
     align-items: center;
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--dark-marine);
-    color: white;
+    background-color: white;
+    color: rgb(80, 79, 79);
     border-radius: 1rem;
     padding: 1rem;
 }
 
 #textDisplay{
-    background-color: var(--dark-marine);
-    color: white;
+    background-color: white;
+    color: rgb(80, 79, 79);
     border-radius: 1rem;
     padding: 1rem;
+    margin: 1rem;
 }
 
 textarea{
@@ -75,7 +76,7 @@ button {
     border-radius: 1rem;
     box-shadow: var(--box-shadow);
     padding: 1rem;
-    background-color: var(--dark-marine);
+    background-color: aquamarine;
     color: white;   
     outline: none;
     font-weight: 700;
