@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const typingBox = document.getElementById('typingDisplay')
     const scoreLabel = document.getElementById('score')
     const wpmLabel = document.getElementById('wpm')
+    const cpmLabel = document.getElementById('cpm')
     const resetButton = document.getElementById('reset')
 
     //used for wpm
@@ -40,8 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         })
 
-        scoreLabel.innerHTML = score
+        scoreLabel.innerHTML = 'Score: ' + score
         if (correct) {
+            cpmLabel.innerHTML = cpmCalculation()
             wpmLabel.innerHTML = wpmCalculation()
             renderNewQuote()
         }
@@ -54,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     async function renderNewQuote(newPage) {
+        //first word is not preceeded by a 
         wordCount = 1
         const quote = await getRandomQuote()
         quoteBox.innerHTML = ''
@@ -82,11 +85,25 @@ document.addEventListener('DOMContentLoaded', () => {
         return Math.floor((new Date() - startTime) / 1000)
     }
 
-    function wpmCalculation() {
-        let wpm = (wordCount / getTimerTime()) * 60
-        let roundedWpm = Math.floor(wpm*10)/10
-        return roundedWpm
+    function cpmCalculation(forWpm) {
+        let chars = 0
+        const arrayQuote = quoteBox.querySelectorAll('span')
+
+        arrayQuote.forEach(() => {
+            chars++
+        })
+
+        let cpm = (chars / getTimerTime()) * 60
+        let roundedCpm = Math.floor(cpm)
+        if(forWpm){
+            return "WPM: " + Math.floor(roundedCpm/5)
+        }
+        return "CPM: " + roundedCpm
     }
+    function wpmCalculation(cpm) {
+        return cpmCalculation(true)
+    }
+
 
     reset.addEventListener('click', () => {
         console.log('reset')
