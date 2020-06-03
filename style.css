@@ -1,83 +1,96 @@
 :root {
-    --box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.5);
-    --dark-marine: rgb(53, 109, 90);
-  }
-
-header{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 3vh;
-    color: green;
-    background-color: aquamarine;
+  --box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  --dark-marine: rgb(53, 109, 90, 0.7);
 }
 
-.content{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-.gamefield{
-    width: 30vw;
-    background-color: var(--dark-marine);
-    box-shadow: var(--box-shadow);
-    padding: 5vw;
-    border-radius: 1rem;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-.scoreboard{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+*{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: white;
-    color: rgb(80, 79, 79);
-    border-radius: 1rem;
-    padding: 1rem;
 }
 
-#textDisplay{
-    background-color: white;
-    color: rgb(80, 79, 79);
-    border-radius: 1rem;
-    padding: 1rem;
-    margin: 1rem;
+body{
+    background-image: url("t-rex-bg.jpg");
 }
 
-textarea{
-    border-style: none;
-    border-radius: 1rem;
-    padding: 1rem;
-    resize: none;
-    outline:none;
-    width: 30vw;
-    box-shadow: var(--box-shadow);
+header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3vh;
+  color: green;
+  background-color: aquamarine;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items:center;
+  text-align: center;
+}
+
+.gamefield {
+  width: 50vw;
+  background-color: var(--dark-marine);
+  box-shadow: var(--box-shadow);
+  background-color: var(--dark-marine);
+  padding: 2vw;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scoreboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: aquamarine;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: var(--box-shadow);
+
+}
+
+#textDisplay {
+  background-color: white;
+  color: rgb(80, 79, 79);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: var(--box-shadow);
+
+}
+
+textarea {
+  border-style: none;
+  border-radius: 1rem;
+  padding: 1rem;
+  resize: none;
+  outline: none;
+  width: 30vw;
+  box-shadow: var(--box-shadow);
 }
 
 /*classes for the game text, depending on right or wrong input*/
-.correct{
-    color: green;
+.correct {
+  color: green;
 }
 
-.incorrect{
-    color: red;
-    text-decoration: underline;
+.incorrect {
+  color: red;
+  text-decoration: underline;
 }
 
 button {
-    margin: 1rem;
-    border: none;
-    border-radius: 1rem;
-    box-shadow: var(--box-shadow);
-    padding: 1rem;
-    background-color: aquamarine;
-    color: white;   
-    outline: none;
-    font-weight: 700;
+  margin: 1rem;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+  padding: 1rem;
+  background-color: aquamarine;
+  color: white;
+  outline: none;
+  font-weight: 700;
 }

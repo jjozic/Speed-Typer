@@ -68,7 +68,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         })
         typingBox.value = null
-        startTimer()
+        if(typingBox.innerHTML!==null){
+            startTimer()
+        }
     }
 
     let startTime
@@ -94,8 +96,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let cpm = (chars / getTimerTime()) * 60
         let roundedCpm = Math.floor(cpm)
-        if(forWpm){
-            return "WPM: " + Math.floor(roundedCpm/5)
+        if (forWpm) {
+            return "WPM: " + Math.floor(roundedCpm / 5)
         }
         return "CPM: " + roundedCpm
     }
