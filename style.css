@@ -35,6 +35,16 @@ textarea{
 
 }
 
+/*classes for the game text, depending on right or wrong input*/
+.correct{
+    color: green;
+}
+
+.incorrect{
+    color: red;
+    text-decoration: underline;
+}
+
 .scoreboard{
     display: flex;
     flex-direction: column;
