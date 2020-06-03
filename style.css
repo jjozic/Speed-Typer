@@ -1,3 +1,8 @@
+:root {
+    --box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.5);
+    --dark-marine: rgb(53, 109, 90);
+  }
+
 header{
     display: flex;
     justify-content: center;
@@ -16,13 +21,32 @@ header{
 .gamefield{
     width: 30vw;
     background-color: aquamarine;
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.5);
+    box-shadow: var(--box-shadow);
     padding: 5vw;
     border-radius: 1rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+}
+
+.scoreboard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--dark-marine);
+    color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+#textDisplay{
+    background-color: var(--dark-marine);
+    color: white;
+    border-radius: 1rem;
+    padding: 1rem;
 }
 
 textarea{
@@ -32,7 +56,7 @@ textarea{
     resize: none;
     outline:none;
     width: 30vw;
-
+    box-shadow: var(--box-shadow);
 }
 
 /*classes for the game text, depending on right or wrong input*/
@@ -45,23 +69,13 @@ textarea{
     text-decoration: underline;
 }
 
-.scoreboard{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(53, 109, 90);
-    color: white;
-    border-radius: 1rem;
-    padding: 1rem;
-}
-
 button {
+    margin: 1rem;
     border: none;
     border-radius: 1rem;
+    box-shadow: var(--box-shadow);
     padding: 1rem;
-    background-color: rgb(53, 109, 90);
+    background-color: var(--dark-marine);
     color: white;   
     outline: none;
     font-weight: 700;

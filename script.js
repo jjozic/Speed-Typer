@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const scoreLabel = document.getElementById('score')
     const wpmLabel = document.getElementById('wpm')
     const cpmLabel = document.getElementById('cpm')
-    const resetButton = document.getElementById('reset')
 
     //used for wpm
     var wordCount = 0
@@ -103,7 +102,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function wpmCalculation(cpm) {
         return cpmCalculation(true)
     }
-
 
     reset.addEventListener('click', () => {
         console.log('reset')
