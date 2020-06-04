@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const quoteBox = document.getElementById('textDisplay')
     const timerElement = document.getElementById('timer')
     const typingBox = document.getElementById('typingDisplay')
-    const scoreLabel = document.getElementById('score')
     const wpmLabel = document.getElementById('wpm')
     const cpmLabel = document.getElementById('cpm')
 
@@ -19,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const arrayQuote = quoteBox.querySelectorAll('span')
         const arrayValue = typingBox.value.split('')
 
-        let score = 0
+        let streak = 0
         let correct = true
 
         arrayQuote.forEach((characterSpan, index) => {
@@ -31,16 +30,13 @@ document.addEventListener('DOMContentLoaded', () => {
             } else if (character === characterSpan.innerText) {
                 characterSpan.classList.add('correct')
                 characterSpan.classList.remove('incorrect')
-                score++
             } else {
                 characterSpan.classList.remove('correct')
                 characterSpan.classList.add('incorrect')
                 correct = false
-                score--
             }
         })
 
-        scoreLabel.innerHTML = 'Score: ' + score
         if (correct) {
             cpmLabel.innerHTML = cpmCalculation()
             wpmLabel.innerHTML = wpmCalculation()
