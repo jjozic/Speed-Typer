@@ -50,7 +50,10 @@ header {
   border-radius: 1rem;
   padding: 1rem;
   box-shadow: var(--box-shadow);
+}
 
+#wpm, #cpm, #timer{
+    font-weight: 700;
 }
 
 #textDisplay {
@@ -90,7 +93,21 @@ button {
   box-shadow: var(--box-shadow);
   padding: 1rem;
   background-color: aquamarine;
-  color: white;
   outline: none;
   font-weight: 700;
 }
+
+@media only screen and (max-width: 1300px) {
+    .gamefield {
+      width: 65vw;
+    }
+  }
+
+@media only screen and (max-width: 1000px) {
+    .gamefield {
+      width: 80vw;
+    }
+    textarea{
+        width: 60vw;
+    }
+  }
